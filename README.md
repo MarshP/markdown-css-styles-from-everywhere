@@ -3,6 +3,9 @@ css files with main Markdown elements in mind, from all over the interwebs.
 
 ## Questions
 
+#### How see examples?
+Download the whole repo, keep the relative structure intact, open the html files.
+
 #### Why?
 I was experimenting with styles for documentation and ended up with a pile for reference and example. I will use them at other times.
 
