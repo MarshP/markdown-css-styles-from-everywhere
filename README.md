@@ -24,5 +24,8 @@ That's not a question. Lots seem made for an editor or converter to render in a 
 #### Not all have examples
 Pull request is your friend
 
+#### Some examples don't work
+That is true.
+
 
 
