@@ -1,0 +1,1 @@
+Keep stylesheet names capitalised as given. Assists in finding and attributing original sources.

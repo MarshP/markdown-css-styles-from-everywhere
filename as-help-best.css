@@ -1,0 +1,431 @@
+/*  NOTES
+========= 
+The current master of this sheet is held at
+
+ C:\Users\Marsh\Documents\WORK\20 Active Steward\User Documentation (svn)\as-help-files (svn)\styles\as-help-style\css\a-s_help_markdown.css
+
+Might be changed there? Copy it here before working.
+Changed it here? Copy it there.
+
+HTML files for A-S help:
+ - if created with all this style inline remove it, import from the path above
+ - also import the font face open sans found at the same path.
+*/
+
+/* CHANGES TO CONSIDER
+======================
+Most elements use padding-left for indentation. This may ned to move to margn-left to work with those thathave a colour bg (see for e.g callToAction)
+*/
+
+/* TYPE SIZE
+============
+Can't do absolute but for a:b where a : 12pt b =
+10 0.83 
+14 1.17
+16 1.33
+18 1.5
+20 1.67
+22 1.83
+24 2
+*/
+
+html {
+
+}
+
+body, div {
+    color: #000000;
+	background: #ffffff;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 100%;
+    margin: 0.5em;
+    padding: 0;
+
+  
+}
+
+/*  PARAGRAPH
+========= */
+p {
+    color: #000000;
+    font-family: "Open Sans",sans-serif;
+    font-size: 1 em;
+	line-height: 1.33;
+	/*border: 1px dashed black;*/
+	padding-left: 1em;
+	
+}
+
+/*  SPECIFIC TO A-S HELP
+======================== */
+img {
+	vertical-align: middle;
+	padding:1px;
+	border:1px solid #465F77;	
+}
+
+.logo-img {
+	vertical-align: middle;
+	padding: 0px;
+	border: 0px;
+}
+
+.site-title{
+	display: inline-block;	
+	font-family: 'Open Sans',sans-serif;
+	color: #0053A0;
+	font-weight: bold;
+	line-height: 1;
+    font-size: 200%;
+	margin-left: auto;
+	margin-right: auto;	
+	/*border: 1px dashed black;*/
+	
+}
+
+.theHeader{
+	
+	
+	/*border: 1px dashed black;*/
+	
+}
+
+.infoBox {
+	border-radius: 3px;
+	border: 1px solid #0053A0; /*#C3D9EE;*/
+	padding-right: 1em;
+	margin-left: 0;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+	
+.relatedHelp {
+	border-radius: 3px;
+	border: 1px solid #555555; /*#C3D9EE;*/
+	padding: 0.1em;
+	margin-left: 0;
+	font-size: 75%;
+}
+
+.callToAction {
+	display: inline-block;
+	background-color: #00A768; /*or F7BC00 yellow */
+	border-radius: 2px 2px;
+	color: #ffffff; /*or 000 */
+    /*
+	font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+	line-height: 1.33;
+	
+	*/
+line-height:1.33;
+padding: 0.0em 0.165em;
+
+
+}
+
+p.callToAction {
+margin-left: 1em;
+
+}
+
+.article-info.muted {
+	
+	color: #555555;
+    font-family: "Open Sans",sans-serif;
+    font-size: 75%;
+}
+
+.helpMenuLink {
+display: inline-block;
+background-color: #0053A0;
+border-radius: 4px;
+padding: 0.3em;
+color : #fff; 
+text-decoration: none;
+font-size: 125%;
+font-weight: 600;
+margin-bottom: 2px;
+/*
+http://stackoverflow.com/questions/6078051/html-how-to-keep-spans-with-padding-and-borders-from-overlapping
+*/
+}
+
+.helpMenuLink:hover {
+color : #fff; 
+text-decoration: underline;
+}
+
+/*
+.helpMenuLink:visited {
+background-color: #0053A0;
+border-radius: 4px;
+padding: 0.5em;
+color : #fff; 
+text-decoration: none;
+font-size: 125%;
+font-weight: 600;
+}
+*/
+
+
+#foot p{
+	
+
+    font-family: "Open Sans",sans-serif;
+    font-size: 75%;
+}
+
+
+/*  LINKS
+========= */
+
+/*
+:link {color: #0053A0; background: #ffffff;}
+*/
+a:link {color: #0053A0;text-decoration: none;}
+
+a:hover {text-decoration: underline; color: #00A768;}
+
+
+
+
+
+
+
+
+
+
+/*  HEADINGS
+========= */
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Open Sans',sans-serif;
+	color: #465F77;
+	font-weight: bold;
+	margin: 0.33em 0 0.33em 0;
+}
+
+h1 {
+    font-size: 1.67em;
+    /*padding-top: 1em;*/
+}
+
+h2 {
+    font-size: 1.5em;
+    
+	
+}
+h3 {
+    font-size: 1.33em;
+    
+}
+h4 {
+    font-size: 1.17em;
+	
+    /*padding-top: 1em;*/
+}
+
+h5 {
+	font-size: 1em;
+    /*padding-top: 1em;*/
+}
+
+h6 {
+	font-size: 0.83em;
+	padding-left: 1em;
+    /*padding-top: 1em;*/
+}
+
+/*  LISTS
+========= */
+ ol, ul{
+    color: #000000;
+    font-family: Open Sans,sans-serif;
+    font-size: 100%;
+padding-left: 2.5em;
+}
+
+li {
+
+padding-top: 0.125em;
+padding-bottom: 0.125em;
+}
+
+ul>li {
+	list-style: disc;   
+	/*border: 1px dashed black;*/
+}
+
+
+ul>li>ul>li {
+	list-style: circle;   
+	
+}
+/*
+ul>li>ul>li>ul>li {
+	list-style: square;   
+	
+}
+*/
+
+ol{
+/* border: 1px dashed black; */
+}
+
+/*TEST LIST COLLAPSING*/
+#listContainer{
+  margin-top:15px;
+}
+ #expList ul> li {
+    list-style: none
+	}
+#expList ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+    cursor: pointer;
+}
+#expList p {
+    margin:0;
+    display:block;
+}
+#expList p:hover {
+    background-color:#121212;
+}
+#expList li {
+    line-height:140%;
+    text-indent:0px;
+    background-position: 1px 8px;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+ 
+/* Collapsed state for list element */
+#expList .collapsed {
+    background-image: url(./img/collapsed.png);
+}
+/* Expanded state for list element
+/* NOTE: This class must be located UNDER the collapsed one */
+#expList .expanded {
+    background-image: url(./img/expanded.png);
+}
+
+.listControl{
+      margin-bottom: 15px;
+    }
+    .listControl a {
+        border: 1px solid #555555;
+        color: #555555;
+        cursor: pointer;
+        height: 1.5em;
+        line-height: 1.5em;
+        margin-right: 5px;
+        padding: 4px 10px;
+    }
+    .listControl a:hover {
+        background-color:#555555;
+        color:#222222; 
+        font-weight:normal;
+    }
+
+/*END TEST */
+
+/*  BLOCKQUOTE
+========= */
+blockquote {
+  border-left: 4px solid #C3D9EE;
+  margin-left: 1.5em;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  padding-left: 0%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  color: #000;
+  font-style: italic;
+}
+
+blockquotefirst-child {
+  margin-top: 0px;
+}
+
+blockquotelast-child {
+  margin-bottom: 0px;
+}
+
+/*  PRE, CODE
+========= */
+pre, code {
+display: inline-block;
+	background-color: #DFEAF6;
+	border-radius: 2px 2px;
+	color: #000000; /*or fff */
+    font-family: Lucida Console, monospace;
+	line-height:1.33;
+	padding: 0.0em 0.165em;
+	
+
+/*display: inline-block;
+  font-size: 100%;
+  font-family: Lucida Console, monospace;
+  border-radius: 2px;
+  line-height: 1.33;
+  background-color: #DFEAF6;
+  padding: 0.25em;
+  overflow: auto;
+  margin-left: 1.5em;
+  */
+}
+
+code {
+
+
+
+  
+ }
+ 
+pre>code {
+  white-space: pre;  
+}
+
+pre {
+margin-left: 1em;  
+ }
+
+/*  TABLES
+========= */
+table {
+    display: inline-table;
+    margin-left: 1em;
+    /*
+	    border: solid 1px #000000;
+    border: solid 1px #C3D9EE;
+	border: 1px solid #465F77;
+	*/
+	
+	
+	
+    border-width: 1px;
+	border-collapse: collapse;
+	
+}
+
+table th {
+  color: #465F77;
+  font-weight: bold;
+  font-size: 100%
+}
+
+table th, table td, table tr{
+/*
+ border: 1px solid #000000;
+  border: 1px solid #C3D9EE;
+  border: 1px solid #465F77;
+  */
+  border: 1px solid #465F77;
+  padding: 0.165em;
+ 
+}
+
+table tr:nth-child(even) {
+background-color: #DFEAF6;
+}
