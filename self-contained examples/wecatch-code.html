@@ -1,0 +1,214 @@
+<!-- STYLESHEET -->
+<style>
+* {
+  color: #555;
+  font-family: -apple-system-font, 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+
+}
+  
+p{
+  letter-spacing: 1px !important;
+  line-height: 28px !important;
+  min-height: 1em !important;
+  box-sizing: border-box !important;
+  word-wrap: break-word !important;
+  text-align: left;
+  margin: 20px 0px !important;
+}
+
+blockquote {
+    border-left: 10px solid rgba(128,128,128,0.075);
+    background-color: rgba(128,128,128,0.05);
+    padding: 13px 15px !important;
+    margin: 0px;
+}
+
+blockquote p {
+  color: #898989;
+  margin: 0px;
+}
+
+strong {
+    font-weight: 700;
+    color: #bf360c;
+}
+
+body {
+  font-size: 15px;
+  padding: 0 30px;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  word-wrap: break-word;
+  padding: 12px 13px;
+  font-size: 13px;
+  color: #898989;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    word-break: break-all !important;
+    margin: 20px 0;
+    line-height: 1.2;
+    text-align: left;
+    font-weight: bold;
+    // padding-left: 15px;
+}
+
+h1 {
+    // border-left: 6px solid #71BA51 !important;
+    font-size: 20px !important;
+}
+
+h2 {
+    // border-left: 4px solid #71BA51 !important;
+    font-size: 18px !important;
+}
+
+h3 {
+    font-size: 16px;
+  // border-left: 4px solid #71BA51 !important;
+}
+
+h4 {
+  font-size: 15px;
+  // border-left: 2px solid #71BA51 !important; 
+}
+
+a {
+  color: #4183C4 !important;
+  text-decoration: none !important;
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+li {
+  line-height: 24px;
+}
+
+hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+    border-bottom: 1px solid #ddd;
+}
+
+pre {
+ background: #f2f2f2 !important;
+ padding: 12px 13px;
+ overflow: auto;
+}
+
+code {
+  color: #a71d5d;
+  overflow: auto;
+  background-color: rgba(241, 236, 229, 0.34);
+  padding: 0 0.2em;
+}
+
+pre code {
+  color: #a71d5d;
+  padding: 0;
+  background-color: none;
+}
+</style>
+<!-- /STYLESHEET -->
+<h1 id="markdown-style-examples-h1">Markdown Style Examples (H1)</h1>
+<p>A page to show how all MD elements look in a style.</p>
+<h2 id="md-elements-h2">MD Elements (H2)</h2>
+<p>All major elements are used, but not every flavour/method of creating them is shown. <code>Have some inline code.</code> This is not a MD primer.</p>
+<h3 id="block-ish-level-h3">Block-ish level (h3)</h3>
+<p>I use h3 for most of my working divisions technical docs.</p>
+<blockquote>
+<p>This is a block paragraph for inline<br />
+quoting. It is given the tag "blockquote".</p>
+<blockquote>
+<p>They can be nested</p>
+</blockquote>
+</blockquote>
+<h4 id="code-blocks-n-divs-h4">Code blocks n' divs (h4)</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">print</span>(<span class="st">&#39;Fenced code block&#39;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="bu">print</span>(<span class="st">&#39;with syntax identifier&#39;</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">a <span class="op">=</span> <span class="dv">15</span></a></code></pre></div>
+<p>On we go...</p>
+<div class="infoBox">
+<p><strong>This text</strong> is in an Active Steward user documents 'infoBox' div.</p>
+</div>
+
+<h3 id="inline-ish-level-h3">Inline-ish level (h3)</h3>
+<p>Text attributes are given these html elements: <em>em</em>, <strong>strong</strong>, <code>code</code>, <del>del</del></p>
+<h5 id="small-stuff-h5">Small stuff (h5)</h5>
+<p><span id="jump_here"></span></p>
+<p>In A-S documents <span class="callToAction">we have this 'call to action' class</span>.</p>
+<h6 id="smallest-stuff-h6">Smallest stuff (h6)</h6>
+<p>In all versions you can insert a id ref then <a href="#jump_here">link to it</a></p>
+<h3 id="lists-images-etc">Lists, images, etc.</h3>
+<ul>
+<li>this is an</li>
+<li>unordered list
+<ul>
+<li>nested item <code>code sits inline list</code>
+<ul>
+<li>double nested</li>
+</ul>
+<ol>
+<li>double-nested, mixed type to numbered</li>
+</ol></li>
+</ul></li>
+</ul>
+<p>This is some more ordinary paragraph text to split lists.</p>
+<ol>
+<li>ordered list</li>
+<li>start each item</li>
+<li>nested</li>
+</ol>
+<ul>
+<li>mixed type to bullet</li>
+</ul>
+<p>Now for <a href="http://daringfireball.net/projects/markdown/syntax">hyperlink syntax</a> and images:</p>
+<p><img src="https://staging.activesteward.com/images/AS-logo.png" alt="Alternative text" /></p>
+<p>Then a HR:</p>
+<hr />
+<h3 id="tables">Tables</h3>
+<p>Note the colons for alignment in this table (text version)</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tables</th>
+<th style="text-align: center;">Are</th>
+<th style="text-align: right;">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">col 1</td>
+<td style="text-align: center;">col 2</td>
+<td style="text-align: right;">col 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">left-align</td>
+<td style="text-align: center;">centered</td>
+<td style="text-align: right;">right-align</td>
+</tr>
+<tr>
+<td style="text-align: left;">another</td>
+<td style="text-align: center;">row for</td>
+<td style="text-align: right;">contrast</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Headings</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>End of file.</p>

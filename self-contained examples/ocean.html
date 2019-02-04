@@ -1,0 +1,466 @@
+<!-- STYLESHEET -->
+<style>
+* {
+  outline: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,ul,blockquote,pre,img,a,abbr,acronym,address,big,cite,code,del,dfn,em,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  vertical-align: baseline;
+  vertical-align: baseline;
+  -webkit-overflow-scrolling: touch;
+}
+
+page, article, picture, section, header, footer, nav, wrapper, pagination, comment, blockquote, aside {
+  display: block;
+}
+
+
+body {
+  font-family: "PingFang SC", 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
+  color: #434343;
+  line-height: 1.5;
+  font-size: 14px;
+  text-rendering: optimizelegibility;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  font-weight: normal;
+  padding: 20px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0,0,0,.08);
+}
+
+i {
+  font-style: italic;
+}
+
+ul {
+  >li {
+      list-style-type: none;
+  }
+}
+
+body {
+  background-color: #fff;
+  min-height: 100%;
+}
+
+a[href^="http"]:empty::before {
+  content: attr(href);
+}
+
+a {
+  text-decoration: none;
+  color: #963;
+  -webkit-transition: color .2s;
+  -o-transition: color .2s;
+  transition: color .2s;
+  &:active {
+    color: #c22;
+    outline: none;
+  }
+  &:hover {
+    color: #c22;
+  }
+}
+
+p {
+  font-size: 100%;
+  line-height: 1.8;
+  margin-bottom: 1em;
+  letter-spacing: 1px;
+}
+
+
+img {
+  width: auto;
+  height: auto;
+  border: none;
+}
+
+h1,h2,h3,h4,h5, h6 {
+  color: #383838;
+  letter-spacing: 0px;
+  text-transform: none;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  font-size: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+abbr {
+    cursor: default;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+figure {
+    margin: 0;
+}
+
+hr {
+    height: 0;
+    padding: 0;
+    box-sizing: content-box;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 14px 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+::-webkit-input-placeholder { 
+  color: #ccc;
+}
+::-moz-placeholder { 
+  color: #ccc;
+}
+:-ms-input-placeholder { 
+  color: #ccc;
+}
+:-moz-placeholder { 
+  color: #ccc;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+  margin: 0;
+}
+
+input[type="text"], 
+input[type="number"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="password"], 
+input[type="email"], 
+input[type="date"], 
+input[type="datetime-local"], 
+input[type="time"], 
+textarea, select {
+  margin: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  padding: 20px * 8/10 20px;
+  border: 1px solid rgba(50,50,50,0.16);
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  line-height: 15px;
+  font-size: 15px;
+  border-radius: 5px;
+  color: #212121;
+  &:focus {
+    color: #383838;
+  }
+  &[disabled] {
+    cursor: not-allowed;
+    background-color: #fafafa;
+    opacity: .85;
+  }
+}
+
+select {
+  background-color: transparent;
+  -webkit-appearance: menulist;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+button,
+input, 
+select, 
+textarea, 
+input, 
+select, 
+textarea {
+    &[readonly], &[disabled] {
+        cursor: default;
+        opacity: .8;
+        background-color: #fff;
+    }
+    &[disabled] {
+        cursor: not-allowed;
+    }
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto; 
+    vertical-align: top; 
+}
+
+caption,th,td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle
+}
+
+q,blockquote {
+  quotes: none
+}
+
+q:before,q:after,blockquote:before,blockquote:after {
+  content: "";
+  content: none
+}
+
+pre, code, tt {
+    font-family: Monaco,"Andale Mono","lucida console","Courier New",monospace;
+}
+
+pre {
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 5px;
+    vertical-align: baseline;
+    box-shadow: none;
+    padding: 10px;
+    overflow: auto;
+    color: #268bd2;
+    background: #f8f8f8;
+    margin: 20px 0;
+    overflow: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
+    word-wrap: normal; 
+}
+
+code {
+  white-space: pre;
+}
+</style>
+<!-- /STYLESHEET -->
+<h1 id="markdown-style-examples-h1">Markdown Style Examples (H1)</h1>
+<p>A page to show how all MD elements look in a style.</p>
+<h2 id="md-elements-h2">MD Elements (H2)</h2>
+<p>All major elements are used, but not every flavour/method of creating them is shown. <code>Have some inline code.</code> This is not a MD primer.</p>
+<h3 id="block-ish-level-h3">Block-ish level (h3)</h3>
+<p>I use h3 for most of my working divisions technical docs.</p>
+<blockquote>
+<p>This is a block paragraph for inline<br />
+quoting. It is given the tag "blockquote".</p>
+<blockquote>
+<p>They can be nested</p>
+</blockquote>
+</blockquote>
+<h4 id="code-blocks-n-divs-h4">Code blocks n' divs (h4)</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">print</span>(<span class="st">&#39;Fenced code block&#39;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="bu">print</span>(<span class="st">&#39;with syntax identifier&#39;</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">a <span class="op">=</span> <span class="dv">15</span></a></code></pre></div>
+<p>On we go...</p>
+<div class="infoBox">
+<p><strong>This text</strong> is in an Active Steward user documents 'infoBox' div.</p>
+</div>
+
+<h3 id="inline-ish-level-h3">Inline-ish level (h3)</h3>
+<p>Text attributes are given these html elements: <em>em</em>, <strong>strong</strong>, <code>code</code>, <del>del</del></p>
+<h5 id="small-stuff-h5">Small stuff (h5)</h5>
+<p><span id="jump_here"></span></p>
+<p>In A-S documents <span class="callToAction">we have this 'call to action' class</span>.</p>
+<h6 id="smallest-stuff-h6">Smallest stuff (h6)</h6>
+<p>In all versions you can insert a id ref then <a href="#jump_here">link to it</a></p>
+<h3 id="lists-images-etc">Lists, images, etc.</h3>
+<ul>
+<li>this is an</li>
+<li>unordered list
+<ul>
+<li>nested item <code>code sits inline list</code>
+<ul>
+<li>double nested</li>
+</ul>
+<ol>
+<li>double-nested, mixed type to numbered</li>
+</ol></li>
+</ul></li>
+</ul>
+<p>This is some more ordinary paragraph text to split lists.</p>
+<ol>
+<li>ordered list</li>
+<li>start each item</li>
+<li>nested</li>
+</ol>
+<ul>
+<li>mixed type to bullet</li>
+</ul>
+<p>Now for <a href="http://daringfireball.net/projects/markdown/syntax">hyperlink syntax</a> and images:</p>
+<p><img src="https://staging.activesteward.com/images/AS-logo.png" alt="Alternative text" /></p>
+<p>Then a HR:</p>
+<hr />
+<h3 id="tables">Tables</h3>
+<p>Note the colons for alignment in this table (text version)</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tables</th>
+<th style="text-align: center;">Are</th>
+<th style="text-align: right;">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">col 1</td>
+<td style="text-align: center;">col 2</td>
+<td style="text-align: right;">col 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">left-align</td>
+<td style="text-align: center;">centered</td>
+<td style="text-align: right;">right-align</td>
+</tr>
+<tr>
+<td style="text-align: left;">another</td>
+<td style="text-align: center;">row for</td>
+<td style="text-align: right;">contrast</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Headings</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>End of file.</p>
