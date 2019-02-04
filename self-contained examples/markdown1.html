@@ -1,0 +1,354 @@
+<!-- STYLESHEET -->
+<style>
+body{
+    background: #000;
+    font-family: Georgia, Palatino, serif;
+    color: #EEE;
+    line-height: 1;
+    padding: 30px;
+    margin:auto;
+    max-width:42em;
+}
+h1, h2, h3, h4 {
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 24px;
+    padding: 0;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+    margin: 24px 0 6px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 21px;
+}
+h5 {
+    font-size: 18px;
+}
+a {
+    color: #61BFC1;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+a:hover {
+    text-decoration: underline;
+}
+a:visited {
+    color: #466B6C;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+}
+li ul, li ul {
+    margin-left: 24px;
+}
+p, ul, ol {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 540px;
+}
+pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 13px;
+}
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    border-left:.5em solid #eee;
+    padding: 0 2em;
+    margin-left:0;
+    max-width: 476px;
+}
+blockquote  cite {
+    font-size:14px;
+    line-height:20px;
+    color:#bfbfbf;
+}
+blockquote cite:before {
+    content: '\2014 \00A0';
+}
+
+blockquote p {  
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 540px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+
+/* Code below this line is copyright Twitter Inc. */
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button, input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+}
+/* override default chrome & firefox settings */
+input:not([type="image"]), textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+label,
+input,
+select,
+textarea {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+  margin-bottom: 18px;
+}
+input[type=checkbox], input[type=radio] {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+input[type=text],
+input[type=password],
+textarea,
+select {
+  display: inline-block;
+  width: 210px;
+  padding: 4px;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  height: 18px;
+  color: #808080;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+select, input[type=file] {
+  height: 27px;
+  line-height: 27px;
+}
+textarea {
+  height: auto;
+}
+
+/* grey out placeholders */
+:-moz-placeholder {
+  color: #bfbfbf;
+}
+::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+input[type=text],
+input[type=password],
+select,
+textarea {
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+  -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+  transition: border linear 0.2s, box-shadow linear 0.2s;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+input[type=text]:focus, input[type=password]:focus, textarea:focus {
+  outline: none;
+  border-color: rgba(82, 168, 236, 0.8);
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* buttons */
+button {
+  display: inline-block;
+  padding: 4px 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  background-color: #0064cd;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#049cdb), to(#0064cd));
+  background-image: -moz-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -ms-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #049cdb), color-stop(100%, #0064cd));
+  background-image: -webkit-linear-gradient(top, #049cdb, #0064cd);
+  background-image: -o-linear-gradient(top, #049cdb, #0064cd);
+  background-image: linear-gradient(top, #049cdb, #0064cd);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #004b9a;
+  border-bottom-color: #003f81;
+  -webkit-transition: 0.1s linear all;
+  -moz-transition: 0.1s linear all;
+  transition: 0.1s linear all;
+  border-color: #0064cd #0064cd #003f81;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+button:hover {
+  color: #fff;
+  background-position: 0 -15px;
+  text-decoration: none;
+}
+button:active {
+  -webkit-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 3px 7px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+</style>
+<!-- /STYLESHEET -->
+<h1 id="markdown-style-examples-h1">Markdown Style Examples (H1)</h1>
+<p>A page to show how all MD elements look in a style.</p>
+<h2 id="md-elements-h2">MD Elements (H2)</h2>
+<p>All major elements are used, but not every flavour/method of creating them is shown. <code>Have some inline code.</code> This is not a MD primer.</p>
+<h3 id="block-ish-level-h3">Block-ish level (h3)</h3>
+<p>I use h3 for most of my working divisions technical docs.</p>
+<blockquote>
+<p>This is a block paragraph for inline<br />
+quoting. It is given the tag "blockquote".</p>
+<blockquote>
+<p>They can be nested</p>
+</blockquote>
+</blockquote>
+<h4 id="code-blocks-n-divs-h4">Code blocks n' divs (h4)</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode Python"><code class="sourceCode python"><a class="sourceLine" id="cb1-1" title="1"><span class="bu">print</span>(<span class="st">&#39;Fenced code block&#39;</span>)</a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="bu">print</span>(<span class="st">&#39;with syntax identifier&#39;</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">a <span class="op">=</span> <span class="dv">15</span></a></code></pre></div>
+<p>On we go...</p>
+<div class="infoBox">
+<p><strong>This text</strong> is in an Active Steward user documents 'infoBox' div.</p>
+</div>
+
+<h3 id="inline-ish-level-h3">Inline-ish level (h3)</h3>
+<p>Text attributes are given these html elements: <em>em</em>, <strong>strong</strong>, <code>code</code>, <del>del</del></p>
+<h5 id="small-stuff-h5">Small stuff (h5)</h5>
+<p><span id="jump_here"></span></p>
+<p>In A-S documents <span class="callToAction">we have this 'call to action' class</span>.</p>
+<h6 id="smallest-stuff-h6">Smallest stuff (h6)</h6>
+<p>In all versions you can insert a id ref then <a href="#jump_here">link to it</a></p>
+<h3 id="lists-images-etc">Lists, images, etc.</h3>
+<ul>
+<li>this is an</li>
+<li>unordered list
+<ul>
+<li>nested item <code>code sits inline list</code>
+<ul>
+<li>double nested</li>
+</ul>
+<ol>
+<li>double-nested, mixed type to numbered</li>
+</ol></li>
+</ul></li>
+</ul>
+<p>This is some more ordinary paragraph text to split lists.</p>
+<ol>
+<li>ordered list</li>
+<li>start each item</li>
+<li>nested</li>
+</ol>
+<ul>
+<li>mixed type to bullet</li>
+</ul>
+<p>Now for <a href="http://daringfireball.net/projects/markdown/syntax">hyperlink syntax</a> and images:</p>
+<p><img src="https://staging.activesteward.com/images/AS-logo.png" alt="Alternative text" /></p>
+<p>Then a HR:</p>
+<hr />
+<h3 id="tables">Tables</h3>
+<p>Note the colons for alignment in this table (text version)</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Tables</th>
+<th style="text-align: center;">Are</th>
+<th style="text-align: right;">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">col 1</td>
+<td style="text-align: center;">col 2</td>
+<td style="text-align: right;">col 3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">left-align</td>
+<td style="text-align: center;">centered</td>
+<td style="text-align: right;">right-align</td>
+</tr>
+<tr>
+<td style="text-align: left;">another</td>
+<td style="text-align: center;">row for</td>
+<td style="text-align: right;">contrast</td>
+</tr>
+</tbody>
+</table>
+
+<h1>Headings</h1>
+<h2>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+<h5>H5</h5>
+<h6>H6</h6>
+<p>End of file.</p>

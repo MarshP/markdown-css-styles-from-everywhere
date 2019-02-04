@@ -1,111 +1,160 @@
 <!-- STYLESHEET -->
 <style>
-* {
-  color:#34495e;
-}
-  
-p{
-  letter-spacing: 1px !important;
-  line-height: 1.7 !important;
-  min-height: 1em !important;
-  box-sizing: border-box !important;
-  word-wrap: break-word !important;
-  text-align: justify;
-  margin: 20px 0 !important;
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic&subset=latin);
+
+img {
+	max-width: 100%;
 }
 
-blockquote {
-    border-left: 4px solid #42b983;
-    padding: 0 15px !important;
-    margin: 0px;
+table {
+	width: 100%;
 }
 
-strong {
-    font-weight: bold;
-    /*border-bottom: 2px solid #BADA55;*/
-    /*color: #898989;*/
+table, th, td {
+	padding: 5px;
 }
 
+
+html, body {
+        padding:1em;
+        margin:auto;
+        max-width:42em;
+        background:#fefefe;
+	}
 body {
-  font-size: 15px;
-}
+	font: 1.3em "Vollkorn", Palatino, Times;
+	color: #333;
+	line-height: 1.4;
+	text-align: justify;
+	}
+header, nav, article, footer {
+	width: 700px;
+	margin:0 auto;
+	}
+article {
+	margin-top: 4em;
+	margin-bottom: 4em;
+	min-height: 400px;
+	}
+footer {
+	margin-bottom:50px;
+	}
+video {
+	margin: 2em 0;
+	border:1px solid #ddd;
+	}
 
-pre {
-  background-color: #f8f8f8;
-  border-radius: 3px;
-  word-wrap: break-word;
-  padding: 12px 13px;
-  font-size: 13px;
-}
+nav {
+	font-size: .9em;
+	font-style: italic;
+	border-bottom: 1px solid #ddd;
+	padding: 1em 0;
+	}
+nav p {
+	margin: 0;
+	}
 
-h1,h2,h3,h4,h5,h6 {
-    word-break: break-all !important;
-    margin: 20px 0;
-    padding-bottom: .3em;
-    line-height: 1.2;
-    text-align: left;
-    font-weight: bold;
-    color: #2c3e50;
-    position: relative;
-}
-
-h1:before, h2:before{
-    content: "#";
-    color: #42b983;
-    position: absolute;
-    left: -0.8em;
-    top: -2px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
+/* Typography
+-------------------------------------------------------- */
 
 h1 {
-    /*border-bottom: 8px solid #71BA51 !important;*/
-    font-size: 20px !important;
-}
-
+	margin-top: 0;
+	font-weight: normal;
+	}
 h2 {
-    /*border-bottom: 5px solid #71BA51 !important;*/
-    font-size: 18px !important;
-}
-
-a {
-  color: #42b983 !important;
-  text-decoration: none !important;
-}
-
-ul, ol {
-  padding-left: 30px;
-}
-
-li {
-  line-height: 24px;
-}
-
-hr {
-    height: 4px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-    border-bottom: 1px solid #ddd;
-}
-
-pre {
- background: #f2f2f2 !important;
- padding: 12px 13px;
-}
-
+	font-weight: normal;
+	}
+h3 {
+	font-weight: normal;
+	font-style: italic;
+	margin-top:3em;
+	}
+p {
+	margin-top:0;
+	-webkit-hypens:auto;
+	-moz-hypens:auto;
+	hyphens:auto;
+	}
+ul {
+	list-style: square;
+	padding-left:1.2em;
+	}
+ol {
+	padding-left:1.2em;
+	}
+blockquote {
+	margin-left: 1em;
+	padding-left: 1em;
+	border-left: 1px solid #ddd;
+	}
 code {
-    margin: 0 2px;
-    padding: 3px 5px;
-    color: #e96900;
-    border-radius: 2px;
-    white-space: inherit;
-    background-color: #f8f8f8;
-}
+	font-family: "Consolas", "Menlo", "Monaco", monospace, serif;
+	font-size: .9em;
+	background: white;
+	}
+a {
+	color: #2484c1;
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: underline;
+	}
+a img {
+	border:none;
+	}
+h1 a, h1 a:hover {
+	color: #333;
+	text-decoration: none;
+	}
+hr {
+	color : #ddd;
+	height : 1px;
+	margin: 2em 0;
+	border-top : solid 1px #ddd;
+	border-bottom : none;
+	border-left: 0;
+	border-right: 0;
+	}
+p#heart{
+	font-size: 2em;
+	line-height: 1;
+	text-align: center;
+	color: #ccc;
+	}
+.red {
+	color:#B50000;
+	}
+
+/* Home Page
+--------------------------- */
+
+body#index li {
+	margin-bottom: 1em;
+	}
+
+
+/* iPad
+-------------------------------------------------------- */
+@media only screen and (max-device-width: 1024px) {
+body {
+	font-size: 120%;
+	line-height: 1.4;
+	}
+} /* @iPad */
+
+/* iPhone
+-------------------------------------------------------- */
+@media only screen and (max-device-width: 480px) {
+body {
+	text-align: left;
+	}
+article, footer {
+	width: auto;
+	}
+article {
+	padding: 0 10px;
+	}
+} /* @iPhone */
 </style>
 <!-- /STYLESHEET -->
 <h1 id="markdown-style-examples-h1">Markdown Style Examples (H1)</h1>
@@ -193,7 +242,7 @@ quoting. It is given the tag "blockquote".</p>
 </tbody>
 </table>
 
-<h1>Heading hierachy</h1>
+<h1>Headings</h1>
 <h2>H2</h2>
 <h3>H3</h3>
 <h4>H4</h4>

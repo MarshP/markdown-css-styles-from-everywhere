@@ -1,16 +1,18 @@
 ## markdown-css-styles-from-everywhere
-css files with main Markdown elements in mind, from all over the interwebs.
+css files with the main Markdown-available elements in mind, from all over the interwebs. 
+
+These could also be used on any html, and on html generated from other sources like ReST or AsciiDoc, however those files may contain html elements not styled by these css sheets.
 
 ## Questions
 
 #### How see examples?
-Download the whole repo, keep the relative structure intact, open the html files.
+Soon there will be a self-contained example for each style - just open the html in a browser. Until then download the whole repo, keep the relative structure intact, open the html files.
 
 #### Why?
 I was experimenting with styles for documentation and ended up with a pile for reference and example. I will use them at other times.
 
 #### You made these?
-Only one, `as-help-best.css` That was my final output after all the learning. The others all belong to others and the content or a web search will get you to the originals. *I will remove any an author asks me to*.
+Only one, `as-help-best.css` That was my final output after all the learning. The others all belong to others and the content or a web search will get you to the originals. WHere there are authorship notices I have ensured they're kept in place. *I will remove any an author asks me to*.
 
 #### Why not embed css in the examples so I don't need the relative structure?
 This arrangemnt suited me on an idle evening.

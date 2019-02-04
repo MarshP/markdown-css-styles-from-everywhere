@@ -1,110 +1,106 @@
 <!-- STYLESHEET -->
 <style>
-* {
-  color:#34495e;
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+color:#444;
+font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+font-size:12px;
+line-height:1.5em;
+padding:1em;
+margin:auto;
+max-width:42em;
+background:#fefefe;
 }
-  
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
 p{
-  letter-spacing: 1px !important;
-  line-height: 1.7 !important;
-  min-height: 1em !important;
-  box-sizing: border-box !important;
-  word-wrap: break-word !important;
-  text-align: justify;
-  margin: 20px 0 !important;
+margin:1em 0;
 }
 
-blockquote {
-    border-left: 4px solid #42b983;
-    padding: 0 15px !important;
-    margin: 0px;
+img{
+max-width:100%;
 }
 
-strong {
-    font-weight: bold;
-    /*border-bottom: 2px solid #BADA55;*/
-    /*color: #898989;*/
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+pre, code, kbd, samp { color: #000; font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 0.98em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
 }
 
-body {
-  font-size: 15px;
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
 }
 
-pre {
-  background-color: #f8f8f8;
-  border-radius: 3px;
-  word-wrap: break-word;
-  padding: 12px 13px;
-  font-size: 13px;
-}
-
-h1,h2,h3,h4,h5,h6 {
-    word-break: break-all !important;
-    margin: 20px 0;
-    padding-bottom: .3em;
-    line-height: 1.2;
-    text-align: left;
-    font-weight: bold;
-    color: #2c3e50;
-    position: relative;
-}
-
-h1:before, h2:before{
-    content: "#";
-    color: #42b983;
-    position: absolute;
-    left: -0.8em;
-    top: -2px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-h1 {
-    /*border-bottom: 8px solid #71BA51 !important;*/
-    font-size: 20px !important;
-}
-
-h2 {
-    /*border-bottom: 5px solid #71BA51 !important;*/
-    font-size: 18px !important;
-}
-
-a {
-  color: #42b983 !important;
-  text-decoration: none !important;
-}
-
-ul, ol {
-  padding-left: 30px;
-}
-
-li {
-  line-height: 24px;
-}
-
-hr {
-    height: 4px;
-    padding: 0;
-    margin: 16px 0;
-    background-color: #e7e7e7;
-    border: 0 none;
-    overflow: hidden;
-    box-sizing: content-box;
-    border-bottom: 1px solid #ddd;
-}
-
-pre {
- background: #f2f2f2 !important;
- padding: 12px 13px;
-}
-
-code {
-    margin: 0 2px;
-    padding: 3px 5px;
-    color: #e96900;
-    border-radius: 2px;
-    white-space: inherit;
-    background-color: #f8f8f8;
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
 }
 </style>
 <!-- /STYLESHEET -->
@@ -193,7 +189,7 @@ quoting. It is given the tag "blockquote".</p>
 </tbody>
 </table>
 
-<h1>Heading hierachy</h1>
+<h1>Headings</h1>
 <h2>H2</h2>
 <h3>H3</h3>
 <h4>H4</h4>

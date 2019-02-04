@@ -1,33 +1,41 @@
 <!-- STYLESHEET -->
 <style>
 * {
-  color:#34495e;
+  color: #646464;
+  font-family: -apple-system-font, 'Helvetica Neue', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
 }
   
 p{
   letter-spacing: 1px !important;
-  line-height: 1.7 !important;
+  line-height: 28px !important;
   min-height: 1em !important;
   box-sizing: border-box !important;
   word-wrap: break-word !important;
   text-align: justify;
-  margin: 20px 0 !important;
+  margin: 20px 10px !important;
 }
 
 blockquote {
-    border-left: 4px solid #42b983;
-    padding: 0 15px !important;
+    border-left: 10px solid rgba(128,128,128,0.075);
+    background-color: rgba(128,128,128,0.05);
+    padding: 13px 15px !important;
     margin: 0px;
 }
 
+blockquote p {
+  color: #898989;
+  margin: 0px;
+}
+
 strong {
-    font-weight: bold;
-    /*border-bottom: 2px solid #BADA55;*/
-    /*color: #898989;*/
+    font-weight: 700;
+    // color: #bf360c;
 }
 
 body {
   font-size: 15px;
+  padding: 0 30px;
+  width: 
 }
 
 pre {
@@ -36,41 +44,48 @@ pre {
   word-wrap: break-word;
   padding: 12px 13px;
   font-size: 13px;
+  color: #898989;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    word-break: break-all !important;
-    margin: 20px 0;
-    padding-bottom: .3em;
-    line-height: 1.2;
-    text-align: left;
+    -webkit-font-smoothing: antialiased;
+    margin: 40px;
+    max-width: 100%;
+    min-height: 1em;
+    color: #189cc7;
+    text-align: center;
+    line-height: 25.200000762939453px;
+    letter-spacing: 1px;
     font-weight: bold;
-    color: #2c3e50;
-    position: relative;
-}
-
-h1:before, h2:before{
-    content: "#";
-    color: #42b983;
-    position: absolute;
-    left: -0.8em;
-    top: -2px;
-    font-size: 1.2em;
-    font-weight: bold;
+    border-bottom-width: 0.5px;
+    border-bottom-style: solid;
+    border-bottom-color: #189cc7;
+    white-space: normal;
+    text-rendering: optimizeLegibility !important;
 }
 
 h1 {
-    /*border-bottom: 8px solid #71BA51 !important;*/
+    // border-left: 6px solid #71BA51 !important;
     font-size: 20px !important;
 }
 
 h2 {
-    /*border-bottom: 5px solid #71BA51 !important;*/
+    // border-left: 4px solid #71BA51 !important;
     font-size: 18px !important;
 }
 
+h3 {
+    font-size: 16px;
+  // border-left: 4px solid #71BA51 !important;
+}
+
+h4 {
+  font-size: 15px;
+  // border-left: 2px solid #71BA51 !important; 
+}
+
 a {
-  color: #42b983 !important;
+  color: #4183C4 !important;
   text-decoration: none !important;
 }
 
@@ -96,15 +111,12 @@ hr {
 pre {
  background: #f2f2f2 !important;
  padding: 12px 13px;
+ overflow: auto;
 }
 
 code {
-    margin: 0 2px;
-    padding: 3px 5px;
-    color: #e96900;
-    border-radius: 2px;
-    white-space: inherit;
-    background-color: #f8f8f8;
+  color: #a71d5d;
+  overflow: auto;
 }
 </style>
 <!-- /STYLESHEET -->
@@ -193,7 +205,7 @@ quoting. It is given the tag "blockquote".</p>
 </tbody>
 </table>
 
-<h1>Heading hierachy</h1>
+<h1>Headings</h1>
 <h2>H2</h2>
 <h3>H3</h3>
 <h4>H4</h4>

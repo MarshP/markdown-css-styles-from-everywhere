@@ -74,4 +74,11 @@ Note the colons for alignment in this table (text version)
 |left-align|centered|right-align|
 |another|row|for contrast|
 
+# Headings hierachy
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
 End of file.
